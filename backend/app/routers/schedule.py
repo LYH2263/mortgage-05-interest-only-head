@@ -5,4 +5,8 @@ router = APIRouter()
 @router.post("/schedule")
 def post_schedule(body: ScheduleRequest):
     with MortgageService() as s:
-        return s.schedule(body.principal, body.annual_rate, body.months, body.loan_id, body.persist, body.preview_rows)
+        return s.schedule(
+            body.principal, body.annual_rate, body.months, body.loan_id, body.persist,
+            body.preview_rows, body.interest_only, body.interest_only_months,
+            body.interest_only_rule_id,
+        )

@@ -6,6 +6,7 @@ import ScheduleWorkbench from './pages/ScheduleWorkbench.vue'
 import RateRules from './pages/RateRules.vue'
 import AmortPreview from './pages/AmortPreview.vue'
 import PaymentHistory from './pages/PaymentHistory.vue'
+import RunDetail from './pages/RunDetail.vue'
 import Settings from './pages/Settings.vue'
 
 export default createRouter({
@@ -18,6 +19,7 @@ export default createRouter({
     { path: '/rates', component: RateRules },
     { path: '/amort', component: AmortPreview },
     { path: '/history', component: PaymentHistory },
+    { path: '/history/:id', component: RunDetail },
     { path: '/settings', component: Settings },
   ],
 })
