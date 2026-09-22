@@ -6,3 +6,5 @@ class ScheduleRequest(BaseModel):
     loan_id: int | None = None
     persist: bool = True
     preview_rows: int = Field(default=12, ge=1, le=120)
+    interest_only: bool = False
+    interest_only_months: int | None = None
